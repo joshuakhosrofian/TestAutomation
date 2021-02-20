@@ -14,7 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6bd520c-54cb-480b-adce-5d622ec8fc79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/utility/StandByUntil.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
