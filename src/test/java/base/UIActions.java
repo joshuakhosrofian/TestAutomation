@@ -6,7 +6,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.DriverUtil;
-import utility.StandByUntil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +17,10 @@ public abstract class UIActions {
     private static WebDriverWait wait;
     private static ArrayList<String> tabs;
 
-    private static StandByUntil standByUntil;
 
     public UIActions() {
         driver = DriverUtil.getDriver();
         wait = new WebDriverWait(driver, WAIT_TIME);
-        standByUntil = new StandByUntil(wait);
     }
 
 
@@ -121,7 +118,7 @@ public abstract class UIActions {
     protected void click(By locator) {
         try {
             highlight(locator);
-            WebElement element = standByUntil.elementIsClickable(locator);
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
             element.click();
         } catch (Exception ex) {
             System.out.println("Element was not clickalbe. Check its locators logic ( Ex: css, xpath .etc");
@@ -147,16 +144,18 @@ public abstract class UIActions {
 
     protected void doubleClick(By locator) {
         highlight(locator);
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         new Actions(driver)
-                .doubleClick(standByUntil.elementIsClickable(locator))
+                .doubleClick(element)
                 .build()
                 .perform();
     }
 
 
     protected void rightClick(By locator) {
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         new Actions(driver)
-                .contextClick(standByUntil.elementIsClickable(locator))
+                .contextClick(element)
                 .build()
                 .perform();
     }
@@ -275,7 +274,7 @@ public abstract class UIActions {
 
     protected void write(By locator, String text) {
         highlight(locator);
-        standByUntil.elementIsThereAndVisibleToUser(locator).sendKeys(text);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
 
@@ -308,8 +307,9 @@ public abstract class UIActions {
     }
 
 
-    protected WebElement element(By locator) {
-        return standByUntil.elementIsThereAndVisibleToUser(locator);
+    protected WebElement findElement(By locator) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return element;
     }
 
 
@@ -368,8 +368,8 @@ public abstract class UIActions {
     }
 
 
-    protected boolean isElementDisplayed() {
-        return false;
+    protected boolean isElementDisplayed(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
     }
     //endregion
 
