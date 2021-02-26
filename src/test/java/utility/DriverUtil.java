@@ -21,6 +21,11 @@ public class DriverUtil {
     private static final String IE               = "ms_ie";
 
     //region Browser Actions
+
+    /**
+     * This method opens the web browser using the ChromeDriver,
+     * and maximizes the window
+     */
     public static void openBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -29,6 +34,11 @@ public class DriverUtil {
         driver.manage().window().maximize();
     }
 
+
+    /**
+     * This method opens the web browser using driver
+     * @param browserType a choice of multiple browsers depending the browser type
+     */
     public static void openBrowser(String browserType) {
         if(browserType.equalsIgnoreCase(CHROME)) {
             WebDriverManager.chromedriver().setup();
@@ -47,6 +57,10 @@ public class DriverUtil {
         }
     }
 
+    /**
+     * Call this method to get the driver
+     * @return driver or if driver is null, this message: "WebDriver instance is null"
+     */
     public static WebDriver getDriver() {
         if(driver == null) {
             throw new NullPointerException("WebDriver instance is null");
@@ -54,10 +68,18 @@ public class DriverUtil {
         return driver;
     }
 
+    /**
+     * Call this method to return chosen browser as a String
+     * @return chosen browser as a String
+     */
     public static String getChosenBrowser() {
         return CHOSEN_BROWSER;
     }
 
+    /**
+     * This method closes the browser.
+     * If the driver is not null, then it will quit using the browser.
+     */
     public static void closeBrowser(){
         if(CHOSEN_BROWSER.equals(FIREFOX)) {
             if(driver != null) {

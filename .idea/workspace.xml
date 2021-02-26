@@ -15,6 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e6bd520c-54cb-480b-adce-5d622ec8fc79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/test/java/base/UIActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/UIActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utility/DriverUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utility/DriverUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +69,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="905" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1613796433546">
