@@ -14,8 +14,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6bd520c-54cb-480b-adce-5d622ec8fc79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/UIActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/UIActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utility/DriverUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utility/DriverUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BoatListingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/FlightListingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/RentalListingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/UIActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/UserActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/UITestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/UITestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UISmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UISmokeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utility/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utility/TestListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +54,38 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
+  <component name="RunManager" selected="TestNG.UISmokeTest.verifyFlightListingsFromIADtoHND">
+    <configuration name="UISmokeTest.verifyFlightListingsFromIADtoHND" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomation" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UISmokeTest" />
+      <option name="METHOD_NAME" value="verifyFlightListingsFromIADtoHND" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UISmokeTest.verifyThatUserCanBookFlight" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestAutomation" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UISmokeTest" />
+      <option name="METHOD_NAME" value="verifyThatUserCanBookFlight" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.UISmokeTest.verifyFlightListingsFromIADtoHND" />
+        <item itemvalue="TestNG.UISmokeTest.verifyThatUserCanBookFlight" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,6 +114,22 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="905" y="149" key="#com.intellij.ide.util.MemberChooser/0.23.1440.826@0.23.1440.826" timestamp="1613796433546" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1614569642352">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1614569642352" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1614569642351">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1614569642351" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1614569642349">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1614569642349" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1614569642351">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1614569642351" />
     <state x="516" y="97" key="Maven.ArtifactSearchDialog" timestamp="1613797010892">
       <screen x="0" y="23" width="1440" height="826" />
     </state>

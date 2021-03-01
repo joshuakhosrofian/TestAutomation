@@ -10,7 +10,7 @@ import utility.DriverUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class UIActions {
+public abstract class UserActions {
 
     private static final Integer WAIT_TIME = 30;
     protected static WebDriver driver;
@@ -20,7 +20,7 @@ public abstract class UIActions {
     /**
      *
      */
-    public UIActions() {
+    public UserActions() {
         driver = DriverUtil.getDriver();
         wait = new WebDriverWait(driver, WAIT_TIME);
     }
@@ -169,6 +169,7 @@ public abstract class UIActions {
      * @param locator location of web element
      */
     protected void click(By locator) {
+        System.out.println(locator.toString());
         try {
             highlight(locator);
             WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));

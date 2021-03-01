@@ -13,13 +13,13 @@ import org.testng.ITestResult;
 public class TestListener implements ITestListener {
 
     private ExtentReports extent;
-    private ExtentTest testcase;
+    private static ExtentTest testcase;
     private ExtentSparkReporter spark;
 
 
     // ===== TEST ====== //
     public void onStart(ITestContext test) {
-        String reportPath = System.getProperty("user.dir") + "/reports/";
+        String reportPath = System.getProperty("user.dir") + "/reports/result.html";
         extent = new ExtentReports();
         spark = new ExtentSparkReporter(reportPath);
         spark.config().setTheme(Theme.STANDARD);
@@ -34,6 +34,10 @@ public class TestListener implements ITestListener {
     // ===== TEST CASE ====== //
     public void onTestStart(ITestResult result) {
         testcase = extent.createTest(result.getName());
+    }
+
+    public static ExtentTest getTestcase(){
+        return testcase;
     }
 
     public void onTestSuccess(ITestResult result) {
