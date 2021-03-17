@@ -14,8 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6bd520c-54cb-480b-adce-5d622ec8fc79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAutomation.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +32,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1oiwnT86RpH6zNLq8V9532f7gkU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -104,10 +98,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="443" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615941922738">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="443" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1615941922738" />
     <state x="905" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1613796433546">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="905" y="149" key="#com.intellij.ide.util.MemberChooser/0.23.1440.826@0.23.1440.826" timestamp="1613796433546" />
+    <state x="768" y="179" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1615942754707">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="768" y="179" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.829@0.23.1440.829" timestamp="1615942754707" />
     <state width="1398" height="772" key="GridCell.Tab.0.bottom" timestamp="1614835408897">
       <screen x="0" y="23" width="1440" height="826" />
     </state>

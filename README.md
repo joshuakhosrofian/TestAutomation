@@ -1,77 +1,72 @@
-#DataDrivenTestAutomation
- Production-ready data driven test automation based on TestNG and Selenium Java
+# API Testing Automation Framework
+Lightweight API testing automation framework that utilizes RestAssured library for sending and 
+parsing HTTP requests and responses.  It offers flexible command-based test environment and test 
+type selection capabilities and automatically generates an HTML based test execution report after each test execution.  
+Also, it updates the test case execution status of corresponding automated manual test cases in JIRA.
 
-##UI/API Test Automation Framework
 
-This test automation framework is based on a hybrid model that contains both UI and API test cases. It focuses on easy test development through abstraction all of the low-level Selenium codes into a single class called UIActions. This easy test development allows even the most new and inexperienced tester to be able to start automating test cases without in-depth knowledge of Selenium.
+### Pre-requisites
+You're system must have following tools and plugins to be able to use this framework. 
+* Download and install Chrome or Firefox browser  ( viewing report )
+* Download and install JDK v1.8 + 
+* Download and install Apache Maven v3.0+
+* Download and install Git v2.0+ 
 
-Dependencies-
-This automation framework has these dependencies following external libraries:
-- rest-assured: used for sending and processing API requests and responses
-- selenium-java: for browser automation through Java code
-- webdrivermanager: for managing WebDriver executable files through Java code
-- testng: for representing, organizing and managing test cases through Java code
-- extentreports: for generating HTML test reports
-- json-path: used for extracting data from the JSON format
-- javafaker: for generating randomized Java test data on the fly.
 
-Framework Project Structure Diagram
-|-data                           #  all test data is stored here
-|-images                         #  all images are stored here
-|-reports                        #  all generated test execution reports are here 
+### Project Dependencies 
+This test automation framework depends on following 
+external libraries.
+- API Automation :  RestAssured Library 
+- JSON data qury :  JsonPath Library
+- Test case creation & management :   TestNG Library 
+- Test Execution Report :  Extent Spark Report 
+- Test Data Generation :  Faker Library 
+
+### Project Folder Structure 
+```
+|-reports                        #  stores all the generated test execution reports 
+|-pom.xml                        #  project object model file for the maven project configuration
+|-testng.xml                     #  configuration files for the test structures and test case managements 
 |-src
    |---test
-         |----java               #  all java source files are stored in this folder, including the following packages
-                |-[+]base        #  all the base classes will be stored here
-                |-[+]pages       #  all the page object classes will be stored here using page object model
-                |-[+]testcase    #  all test classes will be stored here
-                |-[+]utility     #  all the utility classes will be stored here  
+         |----java               
+                |-[+]testcase    #  all test class that contains test cases are here
+                |-[+]utility     #  all the utility class are here
+                |-[+]commons     #  all the commonly used class are here  
+         |----resources         
+                |-[d]payloads    #  all the json files used in tests are stored here 
+              
 |-.gitignore                     #  git ignore config file 
-|-pom.xml                        #  project object model file for the maven software
-|-READMD.md                      #  the file that is currently being viewed
-|-testNG.xml                     #  TestNG configuration files for the test structures and groupings
+|-READMD.md                      #  you are currently viewing this file 
+```
 
-######insert screenshot of project here
 
-####Pre-requisites:
-#####Download and install the following:
-- Chrome or Firefox browser ( for viewing the report )
-- JDK v1.8 +
-- Apache Maven v3.0+
-- Git v2.0+
+### Framework Class Diagrams 
+![internals](/images/Framework.png)
 
-###Inner Working of the Framework
-This diagram shows the internal structure of the framework. 
-Multiple parts of the code work together to bring successful automated test executions.
 
-######insert diagram on inner working framework
+### Set-up Instructions 
+You can use this framework by integrating into existing Jenkins pipeline. Recommended jenkins set-up is as
+follows:
+![screenshot](/images/test_execution_setup.png)
 
-###Set-up Instructions
-This framework contains multiple test contexts such as smoke, regression, e2e etc. in the CI pipeline. 
-Please refer to the following diagram for recommended test triggering points.
 
-###How to run Tests
-All tests are triggered through maven commands. This framework supports multiple different types of test executions such as smoke, regression, and end-to-end and is tested in different environments such as QA, Staging, and UAT. Please download the project and use the command line or terminal to navigate to the root directory of this project. Once you are in the root directory, please execute one of the following commands:
+### Test Triggering Commands
+All the test triggering is done through maven commands, this framework supports multiple different types of 
+test executions such as smoke, regression, and end-to-end on different possible environment such as QA, Staging, and 
+UAT.
 
-#####Executing specific tests
-If you would like to execute a specific test which is stated on testNG.xml file Choose from the following command:
+If you would like to exeucte a specific test that are stated on testng.xml file
+Choose from the following command: 
 
-#####For invoking UI Smoke Test
+For invoking Smoke test"
+```
+mvn test -DtestType="Smoke"
+```
 
-mvn test -Dtestof="UISmokeTest"
+If you would like to execute a specific test on specific environment ( default=UAT ) 
+```
+mvn test -Dtestof="E2E" -Denv="Staging"
+```
 
-#####For invoking API Smoke Test
-
-mvn test -Dtestof="APISmokeTest"
-
-###How to view the report
-All the test execution reports are available as an HTML report in the following folder: 
-
- report
-   |--[HTML] reports
-
-Please navigate to this report file and open the report with your preferred browser.
-
-#####insert screenshot of report here
-   
    
