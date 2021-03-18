@@ -70,3 +70,4 @@ mvn test -Dtestof="E2E" -Denv="Staging"
 ```
 
    # TestAutomationREADME.mdFile
+# TestAutomationImages
