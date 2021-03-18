@@ -1,4 +1,4 @@
-# API Testing Automation Framework
+# UI & API Testing Automation Framework
 Lightweight API testing automation framework that utilizes RestAssured library for sending and 
 parsing HTTP requests and responses.  It offers flexible command-based test environment and test 
 type selection capabilities and automatically generates an HTML based test execution report after each test execution.  
